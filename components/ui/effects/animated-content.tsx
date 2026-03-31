@@ -1,5 +1,14 @@
-"use client";
-import { cn } from "@/lib/utils";
-export function AnimatedContent({ children, className }: { children?: React.ReactNode; className?: string }) {
-  return <div className={cn("relative w-full", className)}>{children}</div>;
+'use client'
+
+import type { ReactNode } from 'react'
+
+interface AnimatedContentProps {
+  children: ReactNode
+  className?: string
 }
+
+export function AnimatedContent({ children, className = '' }: AnimatedContentProps) {
+  return <div className={className}>{children}</div>
+}
+
+export default AnimatedContent
